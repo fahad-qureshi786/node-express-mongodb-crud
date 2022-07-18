@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "0996f6f2-1ee6-4304-87ec-729f70d84665",
+		"name": "ead",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12504399"
+	},
+	"item": [
+		{
+			"name": "security",
+			"item": [
+				{
+					"name": "api/auth/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"fahad-qureshi7861\",\n    \"email\": \"fahadqureshi.se@gmail.com1\",\n    \"password\": \"stranger\",\n    \"roles\": [\"user\", \"moderator\", \"admin\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/test/all unsecure route",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/test/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"test",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/test/user secure",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZDVkNjI4NWI3MDdiODhmYWMxN2MxZSIsImlhdCI6MTY1ODE4MTMwOSwiZXhwIjoxNjU4MjY3NzA5fQ.Q8OxLX17HCpzo09XqqGqHry3YIL2__dENxz8sOAhAxs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/test/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"test",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/test/admin secure authorize to only admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZDVkN2MwNWI3MDdiODhmYWMxN2MyYyIsImlhdCI6MTY1ODE4MTYyNywiZXhwIjoxNjU4MjY4MDI3fQ.aSe9cv7VB50JlyDmPl_r6yF2wNQ_ysuVXzwLwxvO4wU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/test/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"test",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"fahad-qureshi7861\",\n    \"password\": \"stranger\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crud",
+			"item": [
+				{
+					"name": "api/tutorials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/tutorials/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tutorials/62d5c64fe1b60128de96a558",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tutorials",
+								"62d5c64fe1b60128de96a558"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/tutorials/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tutorials/62d5c64fe1b60128de96a558",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tutorials",
+								"62d5c64fe1b60128de96a558"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/tutorials/published",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tutorials/published",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tutorials",
+								"published"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/tutorials",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Tutorial 1\",\n    \"description\": \"Tutorial 1 description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/tutorials?title=js",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tutorials?title=Tutorial 1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tutorials"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Tutorial 1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,3 @@
 module.exports = {
-  HOST: "localhost",
-  PORT: 27017,
-  DB: "bezkoder_db"
+  url: "mongodb+srv://fahad:fahad@cluster0.nbhcowd.mongodb.net/?retryWrites=true&w=majority",
 };
