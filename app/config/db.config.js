@@ -1,3 +1,5 @@
 module.exports = {
-  url: "mongodb://localhost:27017/bezkoder_db"
+  url: "mongodb+srv://fahad:fahad@cluster0.nbhcowd.mongodb.net/?retryWrites=true&w=majority"
 };
+
+

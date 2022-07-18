@@ -1,5 +1,5 @@
 module.exports = mongoose => {
-  var schema = mongoose.Schema(
+  let schema = mongoose.Schema(
     {
       title: String,
       description: String,

@@ -17,15 +17,11 @@ exports.create = (req, res) => {
   });
 
   // Save Tutorial in the database
-  tutorial
-    .save(tutorial)
-    .then(data => {
+  tutorial.save(tutorial).then(data => {
       res.send(data);
-    })
-    .catch(err => {
+    }).catch(err => {
       res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Tutorial."
+        message: err.message || "Some error occurred while creating the Tutorial."
       });
     });
 };
