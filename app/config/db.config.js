@@ -1,5 +1,6 @@
 module.exports = {
-  url: "mongodb+srv://fahad:fahad@cluster0.nbhcowd.mongodb.net/?retryWrites=true&w=majority"
+  url: "mongodb+srv://muntaz:muntaz@cluster0.oqe8mlv.mongodb.net/?retryWrites=true&w=majority"
+  
 };
 
 
